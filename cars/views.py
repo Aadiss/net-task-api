@@ -84,7 +84,7 @@ def add_rate_by_id(request):
 @api_view(['GET'])
 @permission_classes([AllowAny])
 def get_cars_with_rates(request):
-    cars = Car.objects.all()
+    cars = sorted(Car.objects.all(), key=lambda car: car.rates_number, reverse=True)
 
     serializer = CarRatesNumberSerializer(cars, many=True)
 
