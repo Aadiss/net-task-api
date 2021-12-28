@@ -10,7 +10,7 @@ from rest_framework.permissions import AllowAny
 import requests
 
 from .models import Car, Rating
-from .serializers import CarOverallSerializer, RatingOverallSerializer, CarRatingSerializer
+from .serializers import CarOverallSerializer, RatingOverallSerializer, CarRatingSerializer, CarRatesNumberSerializer
 
 
 @api_view(['POST', 'GET'])
@@ -40,7 +40,7 @@ def handle_cars(request):
             if result.get('Model_Name').upper() == model.upper():
 
                 try:
-                    car = Car.objects.create(Make_Name=make, Model_Name=model)
+                    car = Car.objects.create(make=make, model=model)
                     serializer = CarOverallSerializer(car)
 
                     return Response(serializer.data, status=status.HTTP_201_CREATED)
@@ -80,3 +80,12 @@ def add_rate_by_id(request):
     
     return Response({"error": "Invalid rating value, 1-5 required"}, status=status.HTTP_400_BAD_REQUEST)
 
+
+@api_view(['GET'])
+@permission_classes([AllowAny])
+def get_cars_with_rates(request):
+    cars = Car.objects.all()
+
+    serializer = CarRatesNumberSerializer(cars, many=True)
+
+    return Response(serializer.data, status=status.HTTP_200_OK)
