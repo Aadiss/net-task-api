@@ -3,7 +3,7 @@ This is my recruitment task API, which communicates  with an external API.
 
 This simple API containts several endpoints which all are listed bellow. 
 
-The overall point in here is to POST car make and model as a request body and after that my API shot to external API which contains some informations about such make and model
+The overall point in here is to POST car make and model as a request body and after that my API shot to an external API which contains some informations about such make and model
 for instance, if it exists.
 
 You can also add or delete car to our database and rate them in scale 1-5.
