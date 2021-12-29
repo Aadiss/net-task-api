@@ -40,7 +40,7 @@ Key: Content-Type
 Value: application/json
 
 ---
-## Adding or retrieving cars
+# Adding or retrieving cars
 
 ## endpoint: 
 >/cars
@@ -85,6 +85,8 @@ Example response:
 ]
 ```
 
+---
+# Deleting cars
 ## endpoint: 
 >/cars/{id}
 
@@ -93,6 +95,8 @@ allowed methods:
 
 This endpoint may delete car with provided id, if such car exists in our database. If car_id is invalid then an error occurs.
 
+---
+# Rating cars
 ## endpoint: 
 >/rate
 
@@ -109,7 +113,8 @@ Request body pattern:
 
 If you want to rate any car just send above request, if car_id is valid and rating value in range 1-5 then your rate will be created. 
 
-
+---
+# Retrieving popular cars
 ## endpoint: 
 >/popular
 
