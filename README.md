@@ -8,6 +8,8 @@ for instance, if it exists.
 
 You can also add or delete car to our database and rate them in scale 1-5.
 
+---
+
 API is available online via heroku. The url is: https://netg-api.herokuapp.com/
 
 Anyway there is no endpoint like that so you can go directly to https://netg-api.herokuapp.com/cars
@@ -18,8 +20,16 @@ If you use Apple M1 computer then this link might be helpful: https://stackoverf
 
 In case you want to use it locally you just need Docker installed, Dockerfile and docker-compose are prepared. App is connected with Postgres via docker-compose. Notice that you should change environment variables in docker-compose file. Each '*' sign should be changed.
 
+---
+
 There is a bunch of tests written, you can run all of them simply using this command:
 > python manage.py test
+
+To test it out you need to have installed dependencies included in requirements.txt file. Use virtualenv and run:
+
+> pip install -r requirements.txt
+
+---
 
 ## Documentation 
 
