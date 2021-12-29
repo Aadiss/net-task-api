@@ -50,7 +50,7 @@ allowed methods:
 Request body pattern:
 
 ```json
- {
+{
      "make" : "volkswagen",
      "model" : "golf",
 }
@@ -65,33 +65,22 @@ No request body, just returns all cars stored in database with id and average ra
 
 Example response:
 
->[
->
->    {
->    
->        "id": 1,
->        
->        "make": "volkswagen",
->        
->        "model": "passat",
->        
->        "avg_rating": 3.6
->        
->    },
->    
->    {
->    
->        "id": 2,
->        
->        "make": "volkswagen",
->        
->        "model": "golf",
->        
->        "avg_rating": null
->        
->    }
->    
->]
+```json
+[
+    {    
+        "id": 1,        
+        "make": "volkswagen",        
+        "model": "passat",     
+        "avg_rating": 3.6        
+    },    
+    {    
+        "id": 2,        
+        "make": "volkswagen",        
+        "model": "golf",        
+        "avg_rating": null        
+    }    
+]
+```
 
 ## endpoint: 
 >/cars/{id}
