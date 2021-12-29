@@ -22,7 +22,14 @@ There is a bunch of tests written, you can run all of them simply using this com
 > python manage.py test
 
 ## Documentation 
-endpoint: 
+
+If any problem occurs with Postman or other testing tool / way, add to request headers:
+
+Key: Content-Type
+
+Value: application/json
+
+## endpoint: 
 >/cars
 
 allowed methods: 
@@ -71,6 +78,72 @@ Example response:
 >        "model": "golf",
 >        
 >        "avg_rating": null
+>        
+>    }
+>    
+>]
+
+## endpoint: 
+>/cars/{id}
+
+allowed methods: 
+>DELETE
+
+This endpoint may delete car with provided id, if such car exists in our database. If car_id is invalid then an error occurs.
+
+## endpoint: 
+>/rate
+
+allowed methods: 
+>POST
+
+Request body pattern:
+> {
+>
+>     "car_id" : 1,
+>
+>     "rating" : 5,
+>
+>}
+
+If you want to rate any car just send above request, if car_id is valid and rating value in range 1-5 then your rate will be created. 
+
+
+## endpoint: 
+>/popular
+
+allowed methods: 
+>GET
+
+**GET**
+ 
+No request body, just returns all cars stored in database with id and rates number, sorted by rates_number descending.
+
+Example response:
+
+>[
+>
+>    {
+>    
+>        "id": 1,
+>        
+>        "make": "volkswagen",
+>        
+>        "model": "passat",
+>        
+>        "rates_number": 2
+>        
+>    },
+>    
+>    {
+>    
+>        "id": 2,
+>        
+>        "make": "volkswagen",
+>        
+>        "model": "golf",
+>        
+>        "rates_number": 0
 >        
 >    }
 >    
