@@ -148,3 +148,8 @@ Example response:
 >    }
 >    
 >]
+
+# WARNING!
+
+Before testing or trying to send request to HEROKU URL, pleasy visit above link first in order to 'awake' Heroku. 
+
