@@ -30,6 +30,7 @@ To test it out you need to have installed dependencies included in requirements.
 > pip install -r requirements.txt
 
 ---
+---
 
 ## Documentation 
 
@@ -98,7 +99,7 @@ allowed methods:
 
 Request body pattern:
 ```json
- {
+{
      "car_id" : 1,
      "rating" : 5,
 }
