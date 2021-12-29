@@ -47,7 +47,7 @@ Request body pattern:
 >}
 
 In this endpoint user sends make and model, and then app checks if in external API such make and model exists. If yes then car is being saved in our databse.
-If not, error response is returned with details.
+If not, error response is returned with details. Comunication with external API is designed with 'requests' library. This is popular and simple Python library to sending requests and testing / comunicating with API's. 
 
 **GET**
  
