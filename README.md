@@ -97,13 +97,12 @@ allowed methods:
 >POST
 
 Request body pattern:
-> {
->
->     "car_id" : 1,
->
->     "rating" : 5,
->
->}
+```json
+ {
+     "car_id" : 1,
+     "rating" : 5,
+}
+```
 
 If you want to rate any car just send above request, if car_id is valid and rating value in range 1-5 then your rate will be created. 
 
@@ -120,33 +119,22 @@ No request body, just returns all cars stored in database with id and rates numb
 
 Example response:
 
->[
->
->    {
->    
->        "id": 1,
->        
->        "make": "volkswagen",
->        
->        "model": "passat",
->        
->        "rates_number": 2
->        
->    },
->    
->    {
->    
->        "id": 2,
->        
->        "make": "volkswagen",
->        
->        "model": "golf",
->        
->        "rates_number": 0
->        
->    }
->    
->]
+```json
+[
+    {    
+        "id": 1,        
+        "make": "volkswagen",        
+        "model": "passat",     
+        "rates_number": 2        
+    },    
+    {    
+        "id": 2,        
+        "make": "volkswagen",        
+        "model": "golf",        
+        "rates_number": 0        
+    }    
+]
+```
 
 # WARNING!
 
