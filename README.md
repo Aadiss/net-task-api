@@ -16,7 +16,7 @@ Deployment on Heroku was done according to this guide: https://testdriven.io/blo
 
 If you use Apple M1 computer then this link might be helpful: https://stackoverflow.com/questions/66982720/keep-running-into-the-same-deployment-error-exec-format-error-when-pushing-nod
 
-In case you want to use it locally you just need Docker installed, Dockerfile and docker-compose are prepared. App is connected with Postgres via docker-compose. 
+In case you want to use it locally you just need Docker installed, Dockerfile and docker-compose are prepared. App is connected with Postgres via docker-compose. Notice that you should change environment variables in docker-compose file. Each '*' sign should be changed.
 
 There is a bunch of tests written, you can run all of them simply using this command:
 > python manage.py test
