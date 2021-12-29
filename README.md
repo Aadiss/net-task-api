@@ -29,16 +29,18 @@ To test it out you need to have installed dependencies included in requirements.
 
 > pip install -r requirements.txt
 
----
----
+<hr style="border:2px solid blue"> </hr>
 
-## Documentation 
+# Documentation 
 
 If any problem occurs with Postman or other testing tool / way, add to request headers:
 
 Key: Content-Type
 
 Value: application/json
+
+---
+## Adding or retrieving cars
 
 ## endpoint: 
 >/cars
