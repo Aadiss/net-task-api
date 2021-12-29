@@ -4,8 +4,8 @@ services:
   db:
     image: postgres
     environment:
-      - POSTGRES_DB=db
-      - POSTGRES_PASSWORD=postgres
+      - POSTGRES_DB=*
+      - POSTGRES_PASSWORD=*
     volumes:
       - ./data/db:/var/lib/postgresql/data
   web:
@@ -18,10 +18,10 @@ services:
     ports:
       - "8000:8000"
     environment:
-      - POSTGRES_NAME=postgres
-      - POSTGRES_USER=postgres
-      - POSTGRES_PASSWORD=postgres
-      - SECRET_KEY=1293i19iajkmxm@291i431201930j@114i120@m12i21ksaoidkaiosdk
+      - POSTGRES_NAME=*
+      - POSTGRES_USER=*
+      - POSTGRES_PASSWORD=*
+      - SECRET_KEY=*
     depends_on:
       - db
 
